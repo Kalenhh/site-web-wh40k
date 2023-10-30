@@ -22,11 +22,10 @@ h1 {
 
 
 #left_hand {
-
 	display: flex;
 	flex-direction: column;
 }
-#left_hand * {
+#left_hand > div {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -78,6 +77,8 @@ h1 {
 #contenu {
 	margin: 10px;
 }
+
+
 
 @media (max-width:800px) {
 	body {
