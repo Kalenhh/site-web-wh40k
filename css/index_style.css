@@ -19,6 +19,7 @@ html {
 	color: red;
 	font-size: 50px;
 	font-family: serif;
+	text-shadow: 1px 1px 2px pink;
 }
 
 #container {
@@ -29,11 +30,11 @@ html {
 	border-radius: 3px;
 	border: solid 2px black;
 	background-color: lightgrey;
+	margin: 5px;
 }
 
 #left_hand {
 	width: 20%;
-	margin: 5px;
 	height: fit-content;
 }
 
@@ -42,18 +43,22 @@ html {
 	text-align: center;
 }
 
-#right_hand {
-	margin: 5px;
-	flex-grow: 1;
-	min-height: 500px;
-}
-
 ol {
 	list-style-type: none;
 }
 
+#right_hand {
+	flex-grow: 1;
+	padding: 5px;
+}
 
-a:link, a:visited {
+#intro_text {
+	text-align: center;
+}
+
+
+
+#left_hand a:link, #left_hand a:visited {
 	background-color: black;
 	width: 100%;
 	padding: 10px;
@@ -64,12 +69,16 @@ a:link, a:visited {
 	box-sizing: border-box;
 }
 
-a:hover {
+#left_hand a:hover {
 	background-color: gray;
 }
 
-footer {
-	background-color: white;
+#foot {
+	display:flex;
+	justify-content: space-between;
 	margin: 5px;
 	padding: 10px;
+}
+#foot > a {
+	display: none;
 }
