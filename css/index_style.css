@@ -45,7 +45,7 @@ html {
 #right_hand {
 	margin: 5px;
 	flex-grow: 1;
-	height: 500px;
+	min-height: 500px;
 }
 
 ol {
@@ -66,4 +66,10 @@ a:link, a:visited {
 
 a:hover {
 	background-color: gray;
+}
+
+footer {
+	background-color: white;
+	margin: 5px;
+	padding: 10px;
 }
