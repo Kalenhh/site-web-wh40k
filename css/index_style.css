@@ -43,10 +43,6 @@ html {
 	text-align: center;
 }
 
-ol {
-	list-style-type: none;
-}
-
 #right_hand {
 	flex-grow: 1;
 	padding: 5px;
