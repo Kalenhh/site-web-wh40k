@@ -1,3 +1,7 @@
 body {
-	background-color: grey;
+	background-image : linear-gradient(to bottom ,red,green);
+}
+
+#right_hand {
+	color: white;
 }
