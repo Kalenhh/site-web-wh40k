@@ -1,21 +1,22 @@
 body {
 	display: grid;
 	grid-template-columns: 20% 80%;
-	grid-template-rows: 100px auto ;
+	grid-template-rows: 15vh auto ;
+	min-height: 100vh;
 }
 
 
 header {
 	grid-area: 1 / 1 / 2/ 3;
-	display: inline-flex;
+	display: flex;
+	line-height: 15vh;
 }
 
 img {
-	height: 100px;
+	height: 15vh;
 }
 
 h1 {
-	font-size: 30px;
 	text-align: center;
 	margin: auto;
 }
@@ -29,9 +30,8 @@ h1 {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	background-color: white;
 }
-
-
 
 #left_hand a:link, #left_hand a:visited {
 	background-color: black;
@@ -47,9 +47,7 @@ h1 {
 #left_hand a:hover {
 	background-color: gray;
 }
-#left_hand > div {
-	background-color: white;
-}
+
 #left_hand > div > p {
 	padding-left: 10px;
 }
@@ -63,12 +61,12 @@ h1 {
 
 #titre {
 	min-height: 50px;
+	height: auto;
 	text-align: center;
 }
 
+
 .bloc {
-	min-height: 10px;
-	min-width: 10px;
 	border-radius: 3px;
 	border: solid 2px black;
 	margin: 10px;
@@ -80,7 +78,7 @@ h1 {
 
 
 
-@media (max-width:800px) {
+@media (max-width:800px) {  /*Pour téléphone*/
 	body {
 		display: flex ;
 		flex-direction: column;
@@ -89,8 +87,10 @@ h1 {
 	img {
 		display: none;
 	}
-	#left_hand * {
+	#left_hand > div {
 		display: none;
+		position: initial;
+		top: initial;
 	}
 	#left_hand {
 		position: fixed;
@@ -99,13 +99,17 @@ h1 {
 		width: 50px;
 		height: 50px;
 	}
-	#left_hand:hover * {
+	#left_hand:hover > div {
+
 		display: flex;
 		flex-direction: column;
 	}
 	#left_hand:hover {
+		display: block;
 		width: auto;
-		height: auto;
+		height: fit-content;
+		max-height: 100vw;
+		overflow: scroll;
 	}
 
 	header {
